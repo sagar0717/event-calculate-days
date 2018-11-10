@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6296862C-8252-4DA6-83DC-94CB77108D87}</ProjectGuid>
+    <ProjectGuid>{976E46B0-2C64-458D-8FA7-E30F22E335BB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CalculateDays</RootNamespace>
-    <AssemblyName>CalculateDays</AssemblyName>
+    <RootNamespace>CalculateDays.ExternalData</RootNamespace>
+    <AssemblyName>CalculateDays.ExternalData</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CalculateDays.Business\CalculateDays.Business.csproj">
-      <Project>{ada75050-ed9b-4874-8ade-6a651b767e2f}</Project>
-      <Name>CalculateDays.Business</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

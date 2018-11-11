@@ -24,14 +24,15 @@ e.g "01/&nbsp;&nbsp;11/2&nbsp;&nbsp;018" is a valid date.
 ## Running the Application
 #### Input from console (Project - CalculateDays)
 1. Unzip the project.
-2. Move to the application CalculateDays available under bin -> debug and double click to run
+2. Move to the application CalculateDays.exe available under CalculateDays -> bin -> debug and double click to run it.
 3. User will be asked to enter Start and End Date
 
 
 #### Input from console (Project - CalculateDays.ExternalData)
 1. Unzip the project.
-2. Move to the application CalculateDays.ExternalData available under bin -> debug and double click to run
-3. Sample Input and Output file under Resources.
+2. Move to the application CalculateDays.ExternalData available under CalculateDays.ExternalData -> bin -> debug and double click to run it.
+3. Input from XML file(EventDates.xml) for different events would be taken and result would be available in DaysElapsed.txt file.
+   Sample Input and Output file available under Resources
 
 ## Running the tests 
 1. Unzip the project.

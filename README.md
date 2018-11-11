@@ -28,7 +28,7 @@ e.g "01/&nbsp;&nbsp;11/2&nbsp;&nbsp;018" is a valid date.
 3. User will be asked to enter Start and End Date
 
 
-#### Input from console (Project - CalculateDays.ExternalData)
+#### Input from other source (Project - CalculateDays.ExternalData)
 1. Unzip the project.
 2. Move to the application CalculateDays.ExternalData available under CalculateDays.ExternalData -> bin -> debug and double click to run it.
 3. Input from XML file(EventDates.xml) for different events would be taken and result would be available in DaysElapsed.txt file.

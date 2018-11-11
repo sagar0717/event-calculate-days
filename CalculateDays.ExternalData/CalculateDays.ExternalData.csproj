@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventDetails.cs" />
+    <Compile Include="LoadDataXML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DaysElapsed.txt" />
+    <Content Include="Resources\EventDates.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculateDays.Business\CalculateDays.Business.csproj">
+      <Project>{ada75050-ed9b-4874-8ade-6a651b767e2f}</Project>
+      <Name>CalculateDays.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

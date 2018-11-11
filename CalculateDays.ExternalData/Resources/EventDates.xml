@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Events>
+  <Event id="1">
+    <StartDate>01/06/1983</StartDate>
+    <Enddate>22/06/1983</Enddate>
+  </Event>
+  <Event id="2">
+    <StartDate>02-06/1983</StartDate>
+    <Enddate>22/06/1983</Enddate>
+  </Event>
+  <Event id="3">
+    <StartDate>02/06/1983</StartDate>
+    <Enddate>22-06/1983</Enddate>
+  </Event>
+  <Event id="4">
+    <StartDate>02/06/1900</StartDate>
+    <Enddate>22/06/1983</Enddate>
+  </Event>
+  <Event id="5">
+    <StartDate>02/06/1983</StartDate>
+    <Enddate>22/06/3000</Enddate>
+  </Event>
+</Events>
+

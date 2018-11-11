@@ -16,17 +16,23 @@ namespace CalculateDays.ExternalData
             LoadDataXML dataXML = new LoadDataXML();
 
             string _filePath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\CalculateDays.ExternalData\Resources"));
-            dataXML.Loaddata();
+            dataXML.Loaddata(_filePath);
+
+            // verifies if the output result file already exists and delete it to allow the system 
+            // to create a new one for the next input file
 
             if (File.Exists(_filePath + @"\DaysElapsed.txt"))
             {
                 File.Delete(_filePath + @"\DaysElapsed.txt");
             }
-            foreach (EventDetails u in LoadDataXML.events)
+
+            foreach (EventDetails u in LoadDataXML.events) 
             {
                 bool validStartDate = false;
                 bool validEndDate = false;
 
+                // validates the start date of an event
+               // if not logs the error in output file and move to the next iteration
                 validStartDate = validation.ValidateStartDate(u.EventStartDate, ref StartDate);
                 if (!validStartDate)
                 {
@@ -39,6 +45,8 @@ namespace CalculateDays.ExternalData
                     continue;
                 }
 
+                // validates the end date of an event
+                // if not logs the error in output file and move to the next iteration
                 validEndDate = validation.ValidateEndDate(u.EventEndDate, ref EndDate);
                 if (!validEndDate)
                 {
@@ -51,6 +59,8 @@ namespace CalculateDays.ExternalData
                     continue;
                 }
 
+                // if the start and end date are valid compute the number of days beween the event 
+                // and log the result in the output file
                 if (validStartDate && validStartDate)
                 {
                     int numberOfDays = daysElapsed.CalculateDaysElapse(StartDate, EndDate);

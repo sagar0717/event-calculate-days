@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Xml;
 
 namespace CalculateDays.ExternalData
@@ -8,11 +7,15 @@ namespace CalculateDays.ExternalData
     public class LoadDataXML
     {
         public static List<EventDetails> events = new List<EventDetails>();
-        public void Loaddata()
+
+        /// <summary>
+        /// This function get the details of input source in our case XML file and parse it store the value in 
+        /// EventDetails object.
+        /// </summary>
+        public void Loaddata(string path)
         {
             try
             {
-                string path = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\CalculateDays.ExternalData\Resources"));
                 XmlDocument xd = new XmlDocument();
                 xd.Load(path + @"\EventDates.xml");
                 XmlNodeList nodelist = xd.SelectNodes("/Events/Event");

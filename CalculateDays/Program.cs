@@ -19,6 +19,7 @@ namespace CalculateDays
                 bool validStartDate = false;
                 bool validEndDate = false;
 
+                //Validating the start date and making user enter until he enters in correct format
                 while (!validStartDate)
                 {
                     Console.Write("Please enter start date in format DD/MM/YYYY: ");
@@ -28,6 +29,7 @@ namespace CalculateDays
                         Console.WriteLine("Invalid Start Date.");
                 }
 
+                //Validating the end date and making user enter until he enters in correct format
                 while (!validEndDate)
                 {
                     Console.Write("Please enter end date in format DD/MM/YYYY: ");

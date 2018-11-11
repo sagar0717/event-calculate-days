@@ -5,6 +5,9 @@ using System.Globalization;
 
 namespace CalculateDays.Test
 {
+    /// <summary>
+    /// This test class is to test methods ValidateStartDate and ValidateEndDate of Validation class.
+    /// </summary>
     [TestFixture]
     class CalculateDaysTest
     {
@@ -18,6 +21,10 @@ namespace CalculateDays.Test
             validate = new Validation();
         }
 
+        /// <summary>
+        /// This test method tests the ValidateStartDate method of Validation class.
+        /// The methods assert True if the date format is correct.
+        /// </summary>
         [Test]
         public void Should_ReturnTrue_When_ValidFormat_StartDate()
         {
@@ -31,6 +38,10 @@ namespace CalculateDays.Test
             Assert.IsTrue(expectedValue, "Date not in valid Format");
         }
 
+        /// <summary>
+        /// This test method tests the ValidateEndDate method of Validation class.
+        /// The methods assert True if the date format is correct.
+        /// </summary>
         [Test]
         public void Should_ReturnTrue_When_ValidFormat_EndDate()
         {
@@ -44,6 +55,10 @@ namespace CalculateDays.Test
             Assert.IsTrue(expectedValue, "Date not in valid Format");
         }
 
+        /// <summary>
+        /// This test method tests the ValidateStartDate method of Validation class.
+        /// The methods assert False if the date format is incorrect.
+        /// </summary>
         [Test]
         public void Should_ReturnFalse_When_InvalidFormat_StartDate()
         {
@@ -57,6 +72,10 @@ namespace CalculateDays.Test
             Assert.IsFalse(expectedValue, "Date in valid Format");
         }
 
+        /// <summary>
+        /// This test method tests the ValidateStartDate method of Validation class.
+        /// The methods assert False if the date entered is less than allowed value.
+        /// </summary>
         [Test]
         public void Should_Return_False_When_StartDate_SmallerThanAllowed()
         {
@@ -70,6 +89,10 @@ namespace CalculateDays.Test
             Assert.IsFalse(expectedValue, "Valid Date Entered");
         }
 
+        /// <summary>
+        /// This test method tests the ValidateEndDate method of Validation class.
+        /// The methods assert False if the date Format is invalid.
+        /// </summary>
         [Test]
         public void Should_Return_False_When_InvalidFormat_EndDate()
         {
@@ -83,6 +106,10 @@ namespace CalculateDays.Test
             Assert.IsFalse(expectedValue, "Date in valid Format");
         }
 
+        /// <summary>
+        /// This test method tests the ValidateEndDate method of Validation class.
+        /// The methods assert False if the date entered is greater than allowed value.
+        /// </summary>
         [Test]
         public void Should_Return_False_When_EndDate_GreaterThanAllowed()
         {
@@ -95,6 +122,11 @@ namespace CalculateDays.Test
             //Assert
             Assert.IsFalse(expectedValue, "Date in valid Format");
         }
+
+        /// <summary>
+        /// This test method tests the ValidateStartDate method of Validation class.
+        /// The methods assert False if the date entered is a set of characters.
+        /// </summary>
 
         [Test]
         public void Should_Return_False_When_StartDate_Entered_As_Characters()
@@ -117,6 +149,9 @@ namespace CalculateDays.Test
         }
     }
 
+    /// <summary>
+    /// This test class is for testing CalculateDaysElapse method of ComputeDays class.
+    /// </summary>
     [TestFixture]
     public class ComputeDaysTest
     {
@@ -129,6 +164,11 @@ namespace CalculateDays.Test
             validation = new Validation();
         }
 
+        /// <summary>
+        /// This test method tests the CalculateDaysElapse method of ComputeDays class
+        /// It validates when start and end date are in valid format.
+        /// It asserts the value returned by method against the expected value.
+        /// </summary>
         [Test]
         public void Should_Return_DaysElapsed_When_Valid_StartDate_And_Valid_EndDate()
         {
@@ -145,6 +185,11 @@ namespace CalculateDays.Test
             Assert.AreEqual(19, NumberOfDaysElapse);
         }
 
+        /// <summary>
+        /// This test method tests the CalculateDaysElapse method of ComputeDays class.
+        /// It validates when Start Date is greater than end Date.
+        /// It asserts the value returned by method against the expected value.
+        /// </summary>
         [Test]
         public void Should_Return_DaysElapsed_When_StartDate_GreaterThan_EndDate()
         {
@@ -161,6 +206,11 @@ namespace CalculateDays.Test
             Assert.AreEqual(49, NumberOfDaysElapse);
         }
 
+        /// <summary>
+        /// This test method tests the CalculateDaysElapse method of ComputeDays class.
+        /// It validates when Start Date is equal to end Date.
+        /// It asserts the value returned by method against the expected value of 0.
+        /// </summary>
         [Test]
         public void Should_Return_0_DaysElapsed_When_StartDate_Equal_EndDate()
         {
@@ -177,6 +227,11 @@ namespace CalculateDays.Test
             Assert.AreEqual(0, NumberOfDaysElapse);
         }
 
+        /// <summary>
+        /// This test method tests the CalculateDaysElapse method of ComputeDays class.
+        /// It validates when Start Date and End Date are partial days.
+        /// It asserts the value returned by method against the expected value.
+        /// </summary>
         [Test]
         public void Should_Return_0_DaysElapsed_When_StartDate_EndDate_PartialDays()
         {

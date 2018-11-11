@@ -1,5 +1,9 @@
 ﻿namespace CalculateDays.ExternalData
 {
+    /// <summary>
+    /// This class contains the details of an event i.e eventId, start date and end date to store the values from 
+    /// Input source
+    /// </summary>
     public class EventDetails
     {
         private string _eventId;

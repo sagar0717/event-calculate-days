@@ -52,7 +52,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\DaysElapsed.txt" />
     <Content Include="Resources\EventDates.xml" />
   </ItemGroup>
   <ItemGroup>
